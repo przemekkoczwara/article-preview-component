@@ -1,0 +1,32 @@
+@use 'variables' as vars;
+
+.manrope-500 {
+  font-family: vars.$font-base;
+  font-weight: vars.$weight-500;
+  font-style: normal;
+}
+.manrope-700 {
+  font-family: vars.$font-base;
+  font-weight: vars.$weight-700;
+  font-style: normal;
+}
+
+.lh-small {
+  line-height: lh(small);
+}
+.lh-medium {
+  line-height: lh(medium);
+}
+.lh-large {
+  line-height: lh(large);
+}
+
+.ls-small {
+  letter-spacing: ls(small);
+}
+.ls-medium {
+  letter-spacing: ls(medium);
+}
+.ls-large {
+  letter-spacing: ls(large);
+}

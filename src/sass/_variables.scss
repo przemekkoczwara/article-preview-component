@@ -1,0 +1,65 @@
+@use 'sass:math';
+@use 'sass:map';
+
+// colors
+$grey-900: hsl(217, 19%, 35%);
+$grey-500: hsl(214, 17%, 51%);
+$grey-400: hsl(212, 23%, 69%);
+$grey-200: hsl(210, 46%, 95%);
+$white: hsl(0, 100%, 100%);
+
+//font size
+
+$size-base: 1rem; // 13px
+
+// spacing map
+
+$spacing: (
+  0: 0rem,
+  1: math.div(8, 13) * 1rem,
+  2: math.div(16, 13) * 1rem,
+  3: math.div(24, 13) * 1rem,
+  4: math.div(32, 13) * 1rem,
+  5: math.div(40, 13) * 1rem,
+  6: math.div(48, 13) * 1rem,
+  7: math.div(56, 13) * 1rem,
+  8: math.div(64, 13) * 1rem,
+  9: math.div(72, 13) * 1rem,
+  10: math.div(80, 13) * 1rem,
+  11: math.div(130, 13) * 1rem,
+  12: math.div(2000, 13) * 1rem,
+);
+
+// spacing functin
+@function spacing($i) {
+  @return map-get($spacing, $i);
+}
+
+// fonts
+
+$font-base: 'Manrope', sans-serif;
+
+// font weight
+
+$weight-500: 500;
+$weight-700: 700;
+
+$line-heights: (
+  small: 1.3,
+  medium: 1.4,
+  large: 1.6,
+);
+
+$letter-spacings: (
+  small: 0.12%,
+  medium: 0.25%,
+  large: 25%,
+);
+
+@function lh($size) {
+  @return map.get($line-heights, $size);
+}
+
+@function ls($size) {
+  @return map.get($letter-spacings, $size);
+}
