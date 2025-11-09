@@ -1,5 +1,26 @@
 @use 'variables' as vars;
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: vars.$font-base;
+  font-size: 13px;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: vars.$grey-200;
+}
+
 .manrope-500 {
   font-family: vars.$font-base;
   font-weight: vars.$weight-500;

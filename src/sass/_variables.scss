@@ -63,3 +63,9 @@ $letter-spacings: (
 @function ls($size) {
   @return map.get($letter-spacings, $size);
 }
+
+$radius-10: 10px;
+
+// sizes
+
+$size-20: 1.54rem; //20px
